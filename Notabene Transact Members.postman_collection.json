@@ -1,0 +1,431 @@
+{
+  "info": {
+    "_postman_id": "1e638c12-e74a-4ba4-a25b-ad4ee5051ed0",
+    "name": "Notabene Transact Members",
+    "description": "The complete API specification for Notabene Transact.\n\nThe Notabene API is organized around REST. The API accepts JSON-encoded request bodies, returns JSON-encoded responses and uses standard HTTP status codes and verbs.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "32093886"
+  },
+  "item": [
+    {
+      "name": "VASPs",
+      "item": [
+        {
+          "name": "Members",
+          "item": [
+            {
+              "name": "Create Invitation",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"inviteeEmail\": \"isaac.onuwa@notabene.id\",\n    \"roleIds\": [\"GROUP_ADMIN\"]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{url}}/entity/:entityDID/members/invites",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "entity",
+                    ":entityDID",
+                    "members",
+                    "invites"
+                  ],
+                  "variable": [
+                    {
+                      "key": "entityDID",
+                      "value": "{{entityDID}}",
+                      "description": "the VASP DID"
+                    }
+                  ]
+                },
+                "description": "Get the current health of this SafeTransact Node."
+              },
+              "response": [
+                {
+                  "name": "Create Invitation",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n    \"inviteeEmail\": \"isaac.onuwa@notabene.id\",\n    \"roleIds\": [\"GROUP_ADMIN\"]\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{url}}/entity/:entityDID/members/invites",
+                      "host": [
+                        "{{url}}"
+                      ],
+                      "path": [
+                        "entity",
+                        ":entityDID",
+                        "members",
+                        "invites"
+                      ],
+                      "variable": [
+                        {
+                          "key": "entityDID",
+                          "value": "{{entityDID}}",
+                          "description": "the VASP DID"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "Created",
+                  "code": 201,
+                  "_postman_previewlanguage": "plain",
+                  "header": [
+                    {
+                      "key": "Date",
+                      "value": "Tue, 12 Aug 2025 20:25:09 GMT"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "0"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "CF-RAY",
+                      "value": "96e2b347b87b9fb8-AMS"
+                    },
+                    {
+                      "key": "vary",
+                      "value": "Origin"
+                    },
+                    {
+                      "key": "access-control-allow-credentials",
+                      "value": "true"
+                    },
+                    {
+                      "key": "cross-origin-opener-policy",
+                      "value": "same-origin"
+                    },
+                    {
+                      "key": "cross-origin-resource-policy",
+                      "value": "same-origin"
+                    },
+                    {
+                      "key": "origin-agent-cluster",
+                      "value": "?1"
+                    },
+                    {
+                      "key": "strict-transport-security",
+                      "value": "max-age=31536000; includeSubDomains"
+                    },
+                    {
+                      "key": "x-dns-prefetch-control",
+                      "value": "off"
+                    },
+                    {
+                      "key": "x-download-options",
+                      "value": "noopen"
+                    },
+                    {
+                      "key": "x-permitted-cross-domain-policies",
+                      "value": "none"
+                    },
+                    {
+                      "key": "x-xss-protection",
+                      "value": "0"
+                    },
+                    {
+                      "key": "cf-cache-status",
+                      "value": "DYNAMIC"
+                    },
+                    {
+                      "key": "Content-Security-Policy",
+                      "value": "upgrade-insecure-requests; block-all-mixed-content"
+                    },
+                    {
+                      "key": "Permissions-Policy",
+                      "value": "accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=()"
+                    },
+                    {
+                      "key": "Referrer-Policy",
+                      "value": "no-referrer"
+                    },
+                    {
+                      "key": "X-Content-Type-Options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "X-Frame-Options",
+                      "value": "sameorigin"
+                    },
+                    {
+                      "key": "Server",
+                      "value": "cloudflare"
+                    },
+                    {
+                      "key": "alt-svc",
+                      "value": "h3=\":443\"; ma=86400"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": null
+                }
+              ]
+            },
+            {
+              "name": "List Members",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{url}}/entity/:entityDID/members",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "entity",
+                    ":entityDID",
+                    "members"
+                  ],
+                  "variable": [
+                    {
+                      "key": "entityDID",
+                      "value": "{{entityDID}}",
+                      "description": "the VASP did"
+                    }
+                  ]
+                },
+                "description": "Get the current health of this SafeTransact Node."
+              },
+              "response": [
+                {
+                  "name": "List Members",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}/entity/:entityDID/members",
+                      "host": [
+                        "{{url}}"
+                      ],
+                      "path": [
+                        "entity",
+                        ":entityDID",
+                        "members"
+                      ],
+                      "variable": [
+                        {
+                          "key": "entityDID",
+                          "value": "{{entityDID}}",
+                          "description": "the VASP did"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Date",
+                      "value": "Tue, 12 Aug 2025 20:25:32 GMT"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Transfer-Encoding",
+                      "value": "chunked"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "Content-Encoding",
+                      "value": "gzip"
+                    },
+                    {
+                      "key": "vary",
+                      "value": "Origin"
+                    },
+                    {
+                      "key": "access-control-allow-credentials",
+                      "value": "true"
+                    },
+                    {
+                      "key": "cross-origin-opener-policy",
+                      "value": "same-origin"
+                    },
+                    {
+                      "key": "cross-origin-resource-policy",
+                      "value": "same-origin"
+                    },
+                    {
+                      "key": "origin-agent-cluster",
+                      "value": "?1"
+                    },
+                    {
+                      "key": "strict-transport-security",
+                      "value": "max-age=31536000; includeSubDomains"
+                    },
+                    {
+                      "key": "x-dns-prefetch-control",
+                      "value": "off"
+                    },
+                    {
+                      "key": "x-download-options",
+                      "value": "noopen"
+                    },
+                    {
+                      "key": "x-permitted-cross-domain-policies",
+                      "value": "none"
+                    },
+                    {
+                      "key": "x-xss-protection",
+                      "value": "0"
+                    },
+                    {
+                      "key": "etag",
+                      "value": "W/\"13f-zVNCXzEmvr7S3Uqb6DDcoEXmNvk\""
+                    },
+                    {
+                      "key": "cf-cache-status",
+                      "value": "DYNAMIC"
+                    },
+                    {
+                      "key": "Content-Security-Policy",
+                      "value": "upgrade-insecure-requests; block-all-mixed-content"
+                    },
+                    {
+                      "key": "Permissions-Policy",
+                      "value": "accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=()"
+                    },
+                    {
+                      "key": "Referrer-Policy",
+                      "value": "no-referrer"
+                    },
+                    {
+                      "key": "X-Content-Type-Options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "X-Frame-Options",
+                      "value": "sameorigin"
+                    },
+                    {
+                      "key": "Server",
+                      "value": "cloudflare"
+                    },
+                    {
+                      "key": "CF-RAY",
+                      "value": "96e2b3d88a1e9fb8-AMS"
+                    },
+                    {
+                      "key": "alt-svc",
+                      "value": "h3=\":443\"; ma=86400"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "[\n    {\n        \"userId\": \"google-oauth2|116916816129097843937\",\n        \"name\": \"Anna-Maria Koltsova\",\n        \"email\": \"anna-maria@notabene.id\",\n        \"roles\": [\n            {\n                \"name\": \"Group Admin\",\n                \"id\": \"GROUP_ADMIN\"\n            }\n        ]\n    },\n    {\n        \"userId\": \"auth0|64e71a98fe387679899b89cf\",\n        \"name\": \"michele@notabene.id\",\n        \"email\": \"michele@notabene.id\",\n        \"roles\": [\n            {\n                \"name\": \"Group Admin\",\n                \"id\": \"GROUP_ADMIN\"\n            }\n        ]\n    }\n]"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "description": "The SafeConnect VASPs API allows you to create and manage the VASPs that are in this SafeTransact Node."
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "tokenName",
+        "value": "Martin trying",
+        "type": "string"
+      },
+      {
+        "key": "tokenRequestParams",
+        "value": [
+          {
+            "key": "audience",
+            "value": "{{auth0_audience}}",
+            "enabled": true,
+            "send_as": "request_body"
+          }
+        ],
+        "type": "any"
+      },
+      {
+        "key": "client_authentication",
+        "value": "body",
+        "type": "string"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "{{auth0_url}}",
+        "type": "string"
+      },
+      {
+        "key": "grant_type",
+        "value": "client_credentials",
+        "type": "string"
+      },
+      {
+        "key": "clientSecret",
+        "value": "{{client_secret}}",
+        "type": "string"
+      },
+      {
+        "key": "clientId",
+        "value": "{{client_id}}",
+        "type": "string"
+      },
+      {
+        "key": "authUrl",
+        "value": "{{auth0_url}}",
+        "type": "string"
+      },
+      {
+        "key": "addTokenTo",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ]
+}
