@@ -1,0 +1,5 @@
+curl --location -g 'https://api.eu1.notabene.id/entity/{{entityDID}}/members/invites' \
+--data-raw '{
+    "inviteeEmail": "isaac.smith@notabene.id",
+    "roleIds": ["GROUP_ADMIN"]
+}'
