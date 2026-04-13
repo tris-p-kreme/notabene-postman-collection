@@ -1,0 +1,169 @@
+{
+  "info": {
+    "_postman_id": "1a683e66-95ab-40b6-a5bd-52d1c68b6288",
+    "name": "Notabene Transact Audit Log",
+    "description": "The complete API specification for Notabene Transact.\n\nThe Notabene API is organized around REST. The API accepts JSON-encoded request bodies, returns JSON-encoded responses and uses standard HTTP status codes and verbs.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "32093886"
+  },
+  "item": [
+    {
+      "name": "Audit Log",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{url}}/entities/:entity_did/audit-log",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            "entities",
+            ":entity_did",
+            "audit-log"
+          ],
+          "query": [
+            {
+              "key": "limit",
+              "value": "5",
+              "disabled": true
+            },
+            {
+              "key": "offset",
+              "value": "5",
+              "disabled": true
+            },
+            {
+              "key": "domain",
+              "value": "policy",
+              "disabled": true
+            },
+            {
+              "key": "action",
+              "value": "",
+              "disabled": true
+            },
+            {
+              "key": "actor_type",
+              "value": "",
+              "disabled": true
+            },
+            {
+              "key": "actor_id",
+              "value": "",
+              "disabled": true
+            },
+            {
+              "key": "created_after",
+              "value": "2026-04-01T13:08:45.182Z",
+              "disabled": true
+            },
+            {
+              "key": "created_before",
+              "value": "",
+              "disabled": true
+            }
+          ],
+          "variable": [
+            {
+              "key": "entity_did",
+              "value": ""
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "accessTokenUrl",
+        "value": "{{auth0_url}}",
+        "type": "string"
+      },
+      {
+        "key": "tokenName",
+        "value": "SafeTransact EU1 Production",
+        "type": "string"
+      },
+      {
+        "key": "refreshRequestParams",
+        "value": [],
+        "type": "any"
+      },
+      {
+        "key": "tokenRequestParams",
+        "value": [
+          {
+            "key": "audience",
+            "value": "{{auth0_audience}}",
+            "enabled": true,
+            "send_as": "request_body"
+          }
+        ],
+        "type": "any"
+      },
+      {
+        "key": "authRequestParams",
+        "value": [],
+        "type": "any"
+      },
+      {
+        "key": "challengeAlgorithm",
+        "value": "S256",
+        "type": "string"
+      },
+      {
+        "key": "grant_type",
+        "value": "client_credentials",
+        "type": "string"
+      },
+      {
+        "key": "clientSecret",
+        "value": "{{client_secret}}",
+        "type": "string"
+      },
+      {
+        "key": "clientId",
+        "value": "{{client_id}}",
+        "type": "string"
+      },
+      {
+        "key": "addTokenTo",
+        "value": "header",
+        "type": "string"
+      },
+      {
+        "key": "client_authentication",
+        "value": "body",
+        "type": "string"
+      }
+    ]
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ]
+}
